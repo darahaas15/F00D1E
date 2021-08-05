@@ -1,0 +1,9 @@
+{
+  "name": "F00D1E",
+  "version": "1.0.0",
+  "description": "Food delivery app",
+  "main": "index.js",
+  "repository": "https://github.com/darahaas15/F00D1E.git",
+  "author": "Darahaas Yajamanyam <darahaas15@gmail.com>",
+  "license": "MIT"
+}

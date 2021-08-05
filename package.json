@@ -5,6 +5,10 @@
   "main": "index.js",
   "repository": "https://github.com/darahaas15/F00D1E.git",
   "author": "Darahaas Yajamanyam <darahaas15@gmail.com>",
+  "scripts": {
+    "serve": "node server.js",
+    "dev": "nodemon server.js"
+  },
   "license": "MIT",
   "dependencies": {
     "ejs": "^3.1.6",

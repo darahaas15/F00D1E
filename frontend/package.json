@@ -38,5 +38,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "Food delivery app ",
+  "main": "index.js",
+  "repository": "https://github.com/darahaas15/F00D1E.git",
+  "author": "Darahaas Yajamanyam <darahaas15@gmail.com>",
+  "license": "MIT"
 }

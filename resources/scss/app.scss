@@ -3,7 +3,8 @@
 body {
   font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
-  color: $dark;
+  color: $primary;
+  background: $dark-wood;
 }
 
 nav li:last-child a {
@@ -15,4 +16,31 @@ nav li a {
   &:hover {
     color: $primary-hover;
   }
+}
+
+section.hero {
+  background: $secondary;
+  background-image: url(/img/pasta-wide.jpg);
+  width: 100%;
+  height: 100%;
+}
+
+.btn-primary {
+  color: $dark-lighter;
+  background: transparent;
+  border-color: $primary;
+  transition: $smooth-hover;
+  &:hover {
+    background: $primary-hover;
+  }
+}
+
+.hero-heading {
+  color: $primary;
+}
+.hero-text {
+  color: $dark-lighter;
+}
+.polygon {
+  background: $dark-wood;
 }

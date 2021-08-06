@@ -1,11 +1,12 @@
 body {
   font-family: "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
-  color: #232323;
+  color: #c56918;
+  background: #180b06;
 }
 
 nav li:last-child a {
-  background: #fe5f1e;
+  background: #c56918;
 }
 
 nav li a {
@@ -13,4 +14,33 @@ nav li a {
 }
 nav li a:hover {
   color: #b23301;
+}
+
+section.hero {
+  background: #4c2715;
+  background-image: url(/img/pasta-wide.jpg);
+  width: 100%;
+  height: 100%;
+}
+
+.btn-primary {
+  color: #ccc;
+  background: transparent;
+  border-color: #c56918;
+  transition: all 0.3s ease-in-out;
+}
+.btn-primary:hover {
+  background: #b23301;
+}
+
+.hero-heading {
+  color: #c56918;
+}
+
+.hero-text {
+  color: #ccc;
+}
+
+.polygon {
+  background: #180b06;
 }

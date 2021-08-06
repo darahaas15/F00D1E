@@ -47,3 +47,12 @@ section.hero {
 .size {
   background: $secondary;
 }
+.add-cart {
+  border: 2px solid $primary;
+  color: $primary;
+  transition: $smooth-hover;
+  &:hover {
+    background: $primary;
+    color: $dark-lighter;
+  }
+}

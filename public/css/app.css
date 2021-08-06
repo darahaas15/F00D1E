@@ -3,3 +3,14 @@ body {
   -webkit-font-smoothing: antialiased;
   color: #232323;
 }
+
+nav li:last-child a {
+  background: #fe5f1e;
+}
+
+nav li a {
+  transition: all 0.3s ease-in-out;
+}
+nav li a:hover {
+  color: #b23301;
+}

@@ -1,7 +1,18 @@
-@import "./variables";
+@import './variables';
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
   color: $dark;
+}
+
+nav li:last-child a {
+  background: $primary;
+}
+
+nav li a {
+  transition: $smooth-hover;
+  &:hover {
+    color: $primary-hover;
+  }
 }

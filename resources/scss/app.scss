@@ -3,7 +3,10 @@
 body {
   font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
-  color: $primary;
+  color: $dark-lighter;
+  background: $dark-wood;
+}
+.nav {
   background: $dark-wood;
 }
 
@@ -41,6 +44,6 @@ section.hero {
 .hero-text {
   color: $dark-lighter;
 }
-.polygon {
-  background: $dark-wood;
+.size {
+  background: $secondary;
 }

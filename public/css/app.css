@@ -1,7 +1,11 @@
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
-  color: #c56918;
+  color: #ccc;
+  background: #180b06;
+}
+
+.nav {
   background: #180b06;
 }
 
@@ -39,8 +43,4 @@ section.hero {
 
 .hero-text {
   color: #ccc;
-}
-
-.polygon {
-  background: #180b06;
 }

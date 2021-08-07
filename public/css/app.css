@@ -58,3 +58,15 @@ section.hero {
   background: #c56918;
   color: #ccc;
 }
+
+.cart-heading {
+  color: #c56918;
+}
+
+.cart-text {
+  color: #ccc;
+}
+
+.cart {
+  background: #180b06;
+}

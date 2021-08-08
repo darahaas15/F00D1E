@@ -70,6 +70,13 @@ section.hero {
 .cart {
   background: #180b06;
 }
+.cart .amount {
+  color: #c56918;
+}
+.cart .data-field {
+  background: #3d2114;
+  color: #ccc;
+}
 
 ::-webkit-scrollbar-track {
   box-shadow: inset;

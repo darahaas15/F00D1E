@@ -70,3 +70,17 @@ section.hero {
 .cart {
   background: #180b06;
 }
+
+::-webkit-scrollbar-track {
+  box-shadow: inset;
+  background-color: #3d2114;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: #ccc;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+}

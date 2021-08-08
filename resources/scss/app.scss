@@ -23,9 +23,6 @@ nav li a {
 
 section.hero {
   background: $secondary;
-  background-image: url(/img/pasta-wide.jpg);
-  width: 100%;
-  height: 100%;
 }
 
 .btn-primary {
@@ -86,4 +83,15 @@ section.hero {
 
 ::-webkit-scrollbar-thumb {
   background-color: $dark-lighter;
+}
+section.login {
+  .login-form {
+    background: $dark-wood;
+  }
+  .password-box {
+    background: $secondary;
+  }
+  .email-box {
+    background: $secondary;
+  }
 }

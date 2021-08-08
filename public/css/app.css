@@ -22,9 +22,6 @@ nav li a:hover {
 
 section.hero {
   background: #3d2114;
-  background-image: url(/img/pasta-wide.jpg);
-  width: 100%;
-  height: 100%;
 }
 
 .btn-primary {
@@ -90,4 +87,14 @@ section.hero {
 
 ::-webkit-scrollbar-thumb {
   background-color: #ccc;
+}
+
+section.login .login-form {
+  background: #180b06;
+}
+section.login .password-box {
+  background: #3d2114;
+}
+section.login .email-box {
+  background: #3d2114;
 }

@@ -90,8 +90,16 @@ section.login {
   }
   .password-box {
     background: $secondary;
+    border: none;
   }
   .email-box {
     background: $secondary;
+    border: none;
+  }
+  .no-account {
+    transition: $smooth-hover;
+    &:hover {
+      color: $primary-hover;
+    }
   }
 }

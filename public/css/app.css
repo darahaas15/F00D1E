@@ -94,7 +94,15 @@ section.login .login-form {
 }
 section.login .password-box {
   background: #3d2114;
+  border: none;
 }
 section.login .email-box {
   background: #3d2114;
+  border: none;
+}
+section.login .no-account {
+  transition: all 0.3s ease-in-out;
+}
+section.login .no-account:hover {
+  color: #b23301;
 }

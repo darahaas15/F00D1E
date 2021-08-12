@@ -56,16 +56,14 @@ section.hero {
   color: #ccc;
 }
 
-.cart-heading {
-  color: #c56918;
-}
-
-.cart-text {
-  color: #ccc;
-}
-
 .cart {
   background: #180b06;
+}
+.cart .cart-heading {
+  color: #c56918;
+}
+.cart .cart-text {
+  color: #ccc;
 }
 .cart .amount {
   color: #c56918;
@@ -89,6 +87,9 @@ section.hero {
   background-color: #ccc;
 }
 
+section.login {
+  min-height: calc(100vh - 86px);
+}
 section.login .login-form {
   background: #180b06;
 }

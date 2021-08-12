@@ -53,15 +53,16 @@ section.hero {
     color: $dark-lighter;
   }
 }
-.cart-heading {
-  color: $primary;
-}
-.cart-text {
-  color: $dark-lighter;
-}
 
 .cart {
   background: $dark-wood;
+
+  .cart-heading {
+    color: $primary;
+  }
+  .cart-text {
+    color: $dark-lighter;
+  }
   .amount {
     color: $primary;
   }
@@ -84,7 +85,9 @@ section.hero {
 ::-webkit-scrollbar-thumb {
   background-color: $dark-lighter;
 }
+
 section.login {
+  min-height: calc(100vh - 86px);
   .login-form {
     background: $dark-wood;
   }

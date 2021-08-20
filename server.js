@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const ejs = require('ejs');
@@ -5,9 +6,12 @@ const path = require('path');
 const expressLayout = require('express-ejs-layouts');
 const PORT = process.env.PORT || 3000;
 const mongoose = require('mongoose');
-//Database connection
-const url = 'mongodb://localhost/F00D1E';
-mongoose.connect(url, {
+const session = require('express-session');
+const flash = require('express-flash');
+const MongoDbStore = require('connect-mongo')(session);
+
+// Database connection
+mongoose.connect(process.env.MENUS_DB_URL, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
@@ -21,6 +25,24 @@ connection
   .catch((err) => {
     console.log('Connection failed...');
   });
+
+// Session store
+let mongoStore = new MongoDbStore({
+  mongooseConnection: connection,
+  collection: 'sessions',
+});
+
+// Session config
+app.use(
+  session({
+    secret: process.env.COOKIE,
+    resave: false,
+    store: mongoStore,
+    saveUninitialized: false,
+    cookie: { maxAge: 1000 * 60 * 60 * 24 }, // 24 hour
+  })
+);
+
 // assets
 app.use(express.static('public'));
 

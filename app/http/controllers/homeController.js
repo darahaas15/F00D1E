@@ -1,8 +1,9 @@
+const Menu = require('../../models/menu');
 function homeController() {
-  // factory function - simple function that returns an object
   return {
-    index(req, res) {
-      res.render('home');
+    async index(req, res) {
+      const items = await Menu.find();
+      return res.render('home', { items: items });
     },
   };
 }

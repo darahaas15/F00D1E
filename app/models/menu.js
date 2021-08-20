@@ -8,4 +8,4 @@ const menuSchema = new Schema({
   size: { type: String, required: true },
 });
 
-const Menu = mongoose;
+module.exports = mongoose.model('Menu', menuSchema);

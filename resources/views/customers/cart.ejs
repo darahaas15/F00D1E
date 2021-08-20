@@ -1,78 +1,67 @@
 </div>
 <section class="empty-cart py-16 cart">
-    <div class="order container mx-auto w-1/2">
-        <div class="flex items-center border-b border-300 pb-4">
-            <img src="https://i.imgur.com/wxDVP33.png" alt="black-cart">
-            <h1 class="font-bold ml-4 text-2xl">Order summary</h1>
-        </div>
-        <div class="order-list">
-            <div class="flex items-center my-8">
-                <img class="w-24" src="https://i.imgur.com/vEAYxio.png" alt="">
-                <div class="flex-1 ml-4">
-                    <h1>Marinara</h1>
-                    <span>MEDIUM</span>
-                </div>
-                <span class="flex-1">1 Pcs</span>
-                <span class="font-bold text-lg">INR 300</span>
+    <% if(session.cart) { %>
+        <div class="order container mx-auto w-1/2">
+            <div class="flex items-center border-b border-300 pb-4">
+                <img src="https://i.imgur.com/wxDVP33.png" alt="black-cart">
+                <h1 class="font-bold ml-4 text-2xl">Order summary</h1>
             </div>
-            <div class="flex items-center my-8">
-                <img class="w-24" src="https://i.imgur.com/TKxo83h.png" alt="">
-                <div class="flex-1 ml-4">
-                    <h1>Marinara</h1>
-                    <span>MEDIUM</span>
-                </div>
-                <span class="flex-1">1 Pcs</span>
-                <span class="font-bold text-lg">INR 300</span>
-            </div>
-            <div class="flex items-center my-8">
-                <img class="w-24" src="https://i.imgur.com/nonNmD1.png" alt="">
-                <div class="flex-1 ml-4">
-                    <h1>Marinara</h1>
-                    <span>MEDIUM</span>
-                </div>
-                <span class="flex-1">1 Pcs</span>
-                <span class="font-bold text-lg">INR 300</span>
-            </div>
-            <div class="flex items-center my-8">
-                <img class="w-24" src="https://i.imgur.com/c1cf75N.png" alt="">
-                <div class="flex-1 ml-4">
-                    <h1>Marinara</h1>
-                    <span>MEDIUM</span>
-                </div>
-                <span class="flex-1">1 Pcs</span>
-                <span class="font-bold text-lg">INR 300</span>
-            </div>
-        </div>
-        <hr>
-        <div class="text-right py-4">
-            <div>
-                <span class="text-lg font-bold">Total Amount:</span>
-                <span class="amount text-2xl font-bold ml-2">INR 1200</span>
-            </div>
-            <div>
-                <form action="" class="mt-12">
-                    <input class="border border-gray-400 p-2 w-1/2 mb-4 data-field" type="text"
-                        placeholder="Phone number">
-                    <input class="border border-gray-400 p-2 w-1/2 data-field" type="text" placeholder="Address">
-                    <div>
-                        <!--button type="submit"
+            <div class="order-list">
+                <% for(let stuff of Object.values(session.cart.items)) { %>
+                    <div class="flex items-center my-8">
+                        <img class="w-24" src="<%= stuff.item.image %>" alt="">
+                        <div class="flex-1 ml-4">
+                            <h1>
+                                <%= stuff.item.name%>
+                            </h1>
+                            <span>
+                                <%= stuff.item.size%>
+                            </span>
+                        </div>
+                        <span class="flex-1">
+                            <%= stuff.qty %> Pcs
+                        </span>
+                        <span class="font-bold text-lg">INR
+                            <%= stuff.item.price * stuff.qty %>
+                        </span>
+                    </div>
+                    <% } %>
+
+                        <hr>
+                        <div class="text-right py-4">
+                            <div>
+                                <span class="text-lg font-bold">Total Amount:</span>
+                                <span class="amount text-2xl font-bold ml-2">INR <%= session.cart.totalPrice %></span>
+                            </div>
+                            <div>
+                                <form action="" class="mt-12">
+                                    <input class="border border-gray-400 p-2 w-1/2 mb-4 data-field" type="text"
+                                        placeholder="Phone number">
+                                    <input class="border border-gray-400 p-2 w-1/2 data-field" type="text"
+                                        placeholder="Address">
+                                    <div>
+                                        <!--button type="submit"
                             class="hover:bg-500  font-semibold hover:text-white p-4 border hover:border-transparent rounded inline-block mt-5 cursor-pointer btn-primary px-6 py-2 mt-6">Order
                             now</button-->
-                    </div>
-                </form>
+                                    </div>
+                                </form>
+                            </div>
+                            <a class="inline-block cursor-pointer hover:bg-500  font-semibold hover:text-white p-4 border hover:border-transparent rounded inline-block mt-5 cursor-pointer btn-primary px-6 py-2 mt-6"
+                                href="">Login to continue</a>
+                        </div>
             </div>
-            <a class="inline-block cursor-pointer hover:bg-500  font-semibold hover:text-white p-4 border hover:border-transparent rounded inline-block mt-5 cursor-pointer btn-primary px-6 py-2 mt-6"
-                href="">Login to continue</a>
-        </div>
-    </div>
-    <!--div class="container mx-auto text-center">
-        <h1 class="text-3xl font-bold mb-2 cart-heading">Cart Empty 😕</h1>
-        <p class="text-lg text-500 mb-12 cart-text">You haven't ordered anything yet. <br>
-            To order food, go to the main page.
-        </p>
-        <img class="w-2/5 mx-auto" src="https://i.imgur.com/3rqSKtz.png" alt="empty-cart">
-        <a href="/"
-            class="hover:bg-500  font-semibold hover:text-white p-4 border hover:border-transparent rounded inline-block mt-5 cursor-pointer btn-primary mt-122 font-bold">Go
-            back</a>
-    </div-->
+            <% } else { %>
+                <div class="empty-cart py-12">
+                    <div class="container mx-auto text-center">
+                        <h1 class="text-3xl font-bold mb-2 cart-heading">Cart Empty 😕</h1>
+                        <p class="text-lg text-500 mb-12 cart-text">You haven't ordered anything yet. <br>
+                            To order food, go to the main page.
+                        </p>
+                        <img class="w-2/5 mx-auto" src="https://i.imgur.com/3rqSKtz.png" alt="empty-cart">
+                        <a href="/"
+                            class="hover:bg-500  font-semibold hover:text-white p-4 border hover:border-transparent rounded inline-block mt-5 cursor-pointer btn-primary mt-122 font-bold">Go
+                            back</a>
+                    </div>
+                    <% } %>
+                </div>
 </section>

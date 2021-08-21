@@ -13,29 +13,29 @@
                                 <%= messages.error %>
                             </span>
                             <% } %>
-                                <div class="mb-4 email-heading">
+                                <div class="mb-4">
                                     <label class="block text-white-700 text-sm font-bold mb-2" for="username">
                                         Name
                                     </label>
-                                    <input name="name" value="<%=messages.name %>"
-                                        class="shadow appearance-none border rounded w-full py-2 px-3 text-white-700 leading-tight focus:outline-none focus:shadow-outline email-box"
+                                    <input name="name" value="<%= messages.name  %>"
+                                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline email-box"
                                         id="username" type="text" placeholder="Enter your name">
                                 </div>
-                                <div class="mb-4 email-heading">
-                                    <label class="block text-white-700 text-sm font-bold mb-2" for="email">
+                                <div class="mb-4">
+                                    <label class="block text-white-700 text-sm font-bold mb-2" for="username">
                                         Email
                                     </label>
-                                    <input name="email" value="<%=messages.email %>"
-                                        class="shadow appearance-none border rounded w-full py-2 px-3 text-white-700 leading-tight focus:outline-none focus:shadow-outline email-box"
-                                        id="email" type="email" placeholder="Enter your email">
+                                    <input name="email" value="<%= messages.email  %>"
+                                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline email-box"
+                                        id="username" type="email" placeholder="Enter your email">
                                 </div>
                                 <div class="mb-6">
                                     <label class="block text-white-700 text-sm font-bold mb-2" for="password">
                                         Password
                                     </label>
                                     <input name="password"
-                                        class="shadow appearance-none border rounded w-full py-2 px-3 text-white-700 mb-3 leading-tight focus:outline-none focus:shadow-outline password-box"
-                                        id="password" type="password" placeholder="Password">
+                                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline password-box"
+                                        id="password" type="password" placeholder="******************">
                                 </div>
                                 <div class="flex items-center justify-between">
                                     <button

@@ -26,6 +26,9 @@
     "express-session": "^1.17.2",
     "mongoose": "^5.13.7",
     "noty": "^3.2.0-beta-deprecated",
+    "passport": "^0.4.1",
+    "passport-google-oauth": "^2.0.0",
+    "passport-local": "^1.0.0",
     "tailwindcss": "^2.2.7"
   },
   "devDependencies": {

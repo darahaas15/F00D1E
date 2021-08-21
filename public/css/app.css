@@ -371,10 +371,12 @@ section.login .login-form {
   background: #180b06;
 }
 section.login .password-box {
+  color: #ccc;
   background: #3d2114;
   border: none;
 }
 section.login .email-box {
+  color: #ccc;
   background: #3d2114;
   border: none;
 }

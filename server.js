@@ -18,6 +18,7 @@ mongoose.connect(process.env.MENUS_DB_URL, {
   useUnifiedTopology: true,
   useFindAndModify: true,
 });
+
 const connection = mongoose.connection;
 connection
   .once('open', () => {
@@ -26,18 +27,14 @@ connection
   .catch((err) => {
     console.log('Connection failed...');
   });
-//Passport configuration
-const passportInit = require('./app/config/passport');
-passportInit(passport);
-app.use(passport.initialize());
-app.use(passport.session());
+
 // Session store
 let mongoStore = new MongoDbStore({
   mongooseConnection: connection,
   collection: 'sessions',
 });
 
-// Session config
+// Session configuration
 app.use(
   session({
     secret: process.env.COOKIE,
@@ -48,6 +45,12 @@ app.use(
   })
 );
 
+//Passport configuration
+const passportInit = require('./app/config/passport');
+passportInit(passport);
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use(flash());
 // assets
 app.use(express.static('public'));
@@ -57,6 +60,7 @@ app.use(express.json());
 //Global Middleware
 app.use((req, res, next) => {
   res.locals.session = req.session;
+  res.locals.user = req.user;
   next();
 });
 

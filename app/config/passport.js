@@ -20,7 +20,7 @@ function init(passport) {
             if (match) {
               return done(null, user, { message: 'Logged in succesfully' });
             }
-            return done(null, false, { message: 'Wrong username or password' });
+            return done(null, false, { message: 'Wrong email or password' });
           })
           .catch((err) => {
             return done(null, false, { message: 'Something went wrong' });

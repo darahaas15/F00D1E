@@ -323,6 +323,11 @@ section.hero {
   background: #3d2114;
 }
 
+.menu-heading {
+  color: #c56918;
+  font-size: 2rem;
+}
+
 .add-cart {
   border: 2px solid #c56918;
   color: #c56918;

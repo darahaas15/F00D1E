@@ -397,3 +397,7 @@ section.login .no-account:hover {
   padding-left: 8px !important;
   background: #c56918 !important;
 }
+
+a.link {
+  color: #c56918;
+}

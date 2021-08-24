@@ -23,12 +23,14 @@
         <div>
             <ul class="flex items-center">
                 <li class="ml-6"><a href="/">Menu</a></li>
-                <li class="ml-6"><a href="#">Offers</a></li>
+
                 <% if(user) { %>
+                    <li class="ml-6"><a href="/customer/orders">Orders</a></li>
                     <li class="ml-6">
                         <form action="/logout" id="logout" method="POST"></form><a class="cursor-pointer"
                             onclick="document.getElementById('logout').submit()">Logout</a>
                     </li>
+
                     <% } else { %>
                         <li class="ml-6"><a href="/register">Register</a></li>
                         <li class="ml-6"><a href="/login">Login</a></li>

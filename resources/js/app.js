@@ -1,5 +1,7 @@
 import axios from 'axios';
 import Noty from 'noty';
+import { initAdmin } from './admin';
+
 let addCart = document.querySelectorAll('.add-cart');
 let cartCounter = document.querySelector('#cartCounter');
 
@@ -31,3 +33,11 @@ addCart.forEach((btn) => {
     updateCart(items);
   });
 });
+
+//Remove "Order placed" message alert after 2 seconds
+const alertMsg = document.querySelector('#success-alert');
+if (alertMsg) {
+  setTimeout(() => {
+    alertMsg.remove();
+  }, 2000);
+}

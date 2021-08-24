@@ -28,7 +28,7 @@ function initRoutes(app) {
 
   //Admin protected routes
   app.get('/admin/orders', admin, adminOrderController().index);
-  app.get('/admin/order/status', admin, statusController().update);
+  app.post('/admin/order/status', admin, statusController().update);
 }
 
 module.exports = initRoutes;

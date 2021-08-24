@@ -401,3 +401,12 @@ section.login .no-account:hover {
 a.link {
   color: #c56918;
 }
+
+.select-block {
+  color: #ccc;
+  background: #180b06;
+}
+
+.order-status-text {
+  color: #c56918;
+}

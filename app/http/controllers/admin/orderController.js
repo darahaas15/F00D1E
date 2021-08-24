@@ -12,6 +12,7 @@ function orderController() {
         })
         .populate('customerId', '-password')
         .exec((err, orders) => {
+          //If AJAX call exists
           if (req.xhr) {
             return res.json(orders);
           } else {

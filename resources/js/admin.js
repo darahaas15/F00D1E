@@ -1,3 +1,6 @@
+import axios from 'axios';
+import moment from 'moment';
+
 function initAdmin() {
   const orderTableBody = document.querySelector('#orderTableBody');
   let orders = [];
@@ -18,6 +21,17 @@ function initAdmin() {
       console.log(err);
     });
 
+  function renderItems(items) {
+    let parsedItems = Object.values(items);
+    return parsedItems
+      .map((menuItem) => {
+        return `
+              <p>${menuItem.item.name} - ${menuItem.qty} pcs </p>
+          `;
+      })
+      .join('');
+  }
+
   function generateMarkup(orders) {
     return orders
       .map((order) => {
@@ -36,7 +50,7 @@ function initAdmin() {
                             order._id
                           }">
                           <select name="status" onchange="this.form.submit()"
-                              class="block appearance-none w-full  border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                              class="block appearance-none bg-white w-full border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
                               <option value="order_placed"
                                   ${
                                     order.status === 'order_placed'

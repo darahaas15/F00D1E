@@ -1,4 +1,4 @@
-<section class="orders light-section">
+<section class="orders light-section orders">
     <div class="container mx-auto pt-12">
         <h1 class="font-bold text-lg mb-4">All orders</h1>
         <% if(messages.success) { %>
@@ -26,7 +26,7 @@
                                         <a class="link" href="/customer/orders/<%= order._id %>">
                                             <%= order._id %>
                                         </a>
-                                        <span>(Click to track order)</span>
+                                        <!--span>(Click to track order)</span-->
                                     </td>
                                     <td class="border px-4 py-2">
                                         <%= order.phone %>

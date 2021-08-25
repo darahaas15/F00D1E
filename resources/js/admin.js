@@ -38,20 +38,24 @@ export function initAdmin(socket) {
       .map((order) => {
         return `
                 <tr>
-                <td class="border px-4 py-2 text-900 order-status-text">
+                <td class="border customerorderst px-4 py-2 text-900 order-status-text">
                     <p>${order._id}</p>
                     <div>${renderItems(order.items)}</div>
                 </td>
-                <td class="border px-4 py-2">${order.customerId.name}</td>
-                <td class="border px-4 py-2">${order.address}</td>
-                <td class="border px-4 py-2">
+                <td class="border customerorderst px-4 py-2">${
+                  order.customerId.name
+                }</td>
+                <td class="border customerorderst px-4 py-2">${
+                  order.address
+                }</td>
+                <td class="border customerorderst px-4 py-2">
                     <div class="inline-block relative w-64">
                         <form action="/admin/order/status" method="POST">
                             <input type="hidden" name="orderId" value="${
                               order._id
                             }">
                             <select name="status" onchange="this.form.submit()"
-                                class="block appearance-none w-full  border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline select-block">
+                                class="block appearance-none w-full  border customerorderst hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline select-block">
                                 <option value="order_placed"
                                     ${
                                       order.status === 'order_placed'
@@ -89,10 +93,10 @@ export function initAdmin(socket) {
                         </div>
                     </div>
                 </td>
-                <td class="border px-4 py-2">
+                <td class="border customerorderst px-4 py-2">
                     ${moment(order.createdAt).format('hh:mm A')}
                 </td>
-                <td class="border px-4 py-2">
+                <td class="border customerorderst px-4 py-2">
                     ${order.paymentStatus ? 'paid' : 'Not paid'}
                 </td>
             </tr>

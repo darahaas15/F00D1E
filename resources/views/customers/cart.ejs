@@ -13,9 +13,7 @@
                             <h1>
                                 <%= stuff.item.name%>
                             </h1>
-                            <span>
-                                <%= stuff.item.size%>
-                            </span>
+
                         </div>
                         <span class="flex-1">
                             <%= stuff.qty %> Pcs
@@ -35,10 +33,10 @@
                             <% if(user) { %>
                                 <div>
                                     <form action="/orders" method="POST" class="mt-12">
-                                        <input name="phone" class="border border-gray-400 p-2 w-1/2 mb-4 data-field"
-                                            type="text" placeholder="Phone number">
-                                        <input name="address" class="border border-gray-400 p-2 w-1/2 data-field"
-                                            type="text" placeholder="Address">
+                                        <input name="phone" class="border  p-2 w-1/2 mb-4 data-field" type="text"
+                                            placeholder="Phone number">
+                                        <input name="address" class="border  p-2 w-1/2 data-field" type="text"
+                                            placeholder="Address">
                                         <div>
                                             <button type="submit"
                                                 class="hover:bg-500  font-semibold hover:text-white p-4 border hover:border-transparent rounded inline-block mt-5 cursor-pointer btn-primary px-6 py-2 mt-6">Order

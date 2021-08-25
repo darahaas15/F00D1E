@@ -69,7 +69,7 @@ section.menu {
 }
 
 .cart {
-  background: $light-wood;
+  background: $dark-wood;
 
   .cart-heading {
     color: $primary;
@@ -84,6 +84,15 @@ section.menu {
     background: $light-wood;
     color: $dark-lighter;
   }
+  .data-field {
+    border-color: $lighter-wood;
+  }
+}
+.customerordersh {
+  border-color: $lighter-wood;
+}
+.customerorderst {
+  border-color: $lighter-wood;
 }
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);

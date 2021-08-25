@@ -23,10 +23,10 @@ mongoose.connect(process.env.MENUS_DB_URL, {
 const connection = mongoose.connection;
 connection
   .once('open', () => {
-    console.log('Database connected...');
+    console.log('Database connected');
   })
   .catch((err) => {
-    console.log('Connection failed...');
+    console.log('Database connection failed');
   });
 
 // Session store
@@ -76,6 +76,9 @@ app.set('view engine', 'ejs');
 
 // routes
 require('./routes/web')(app);
+app.use((req, res) => {
+  res.status(404).render('errors/404.ejs');
+});
 
 const server = app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);

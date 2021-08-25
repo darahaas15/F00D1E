@@ -80,7 +80,7 @@ app.use((req, res) => {
   res.status(404).render('errors/404.ejs');
 });
 
-const server = app.listen(process.env.PORT || 3000, function () {
+const server = app.listen(process.env.PORT, function () {
   console.log(
     'Express server listening on port %d in %s mode',
     this.address().port,

@@ -11,7 +11,7 @@ Restaurant delivery app with full admin side order status control. Made by [Dara
 - Admin side order status updation
  ![image](https://user-images.githubusercontent.com/63366288/130773148-782dade1-6309-4f89-af01-dc816f2b941c.png)
 - Updates are reflected on the customer's side
-- ![image](https://user-images.githubusercontent.com/63366288/130773307-3120e106-1808-4ee9-a0a1-c412408e0c0c.png)
+ ![image](https://user-images.githubusercontent.com/63366288/130773307-3120e106-1808-4ee9-a0a1-c412408e0c0c.png)
 - contains admin and user protected routes
  ![image](https://user-images.githubusercontent.com/63366288/130773443-4135a9f4-10a3-4a11-9539-85aa72948fb4.png)
 

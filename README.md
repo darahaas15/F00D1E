@@ -15,7 +15,7 @@ Restaurant delivery app with full admin side order status control. Made by [Dara
 - contains admin and user protected routes
  ![image](https://user-images.githubusercontent.com/63366288/130773443-4135a9f4-10a3-4a11-9539-85aa72948fb4.png)
 
-###Things I learnt while doing this project:
+## Things I learnt while doing this project:
 - Learnt TailWind CSS for a responsive design and EJS templating engine.
 - Working with the Laravel Mix webpack.
 - Express-flash and Noty for displaying server side notifications on to the front-end.

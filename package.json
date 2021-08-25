@@ -11,7 +11,8 @@
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "npm run development -- --watch",
     "prod": "npm run production",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js"
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "start": "node app.js"
   },
   "license": "MIT",
   "dependencies": {
@@ -30,6 +31,7 @@
     "passport": "^0.4.1",
     "passport-google-oauth": "^2.0.0",
     "passport-local": "^1.0.0",
+    "serve": "^12.0.0",
     "serve-favicon": "^2.5.0",
     "socket.io": "^4.1.3",
     "tailwindcss": "^2.2.7"

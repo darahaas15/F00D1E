@@ -99,3 +99,6 @@ socket.on('orderUpdated', (data) => {
     progressBar: false,
   }).show();
 });
+
+const btn = document.querySelector('button.mobile-menu-button');
+const menu = document.querySelector('.mobile-menu');

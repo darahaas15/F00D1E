@@ -57,6 +57,7 @@ section.menu {
 .menu-heading {
   color: $primary;
   font-size: 2rem;
+  text-decoration: wavy;
 }
 .add-cart {
   border: 2px solid $primary;
@@ -66,6 +67,9 @@ section.menu {
     background: $primary;
     color: $dark-lighter;
   }
+}
+.heading-main {
+  font-family: 'Roboto', sans-serif;
 }
 
 .cart {
@@ -87,6 +91,9 @@ section.menu {
   .data-field {
     border-color: $lighter-wood;
   }
+}
+.repo-link {
+  color: $primary;
 }
 .customerordersh {
   border-color: $lighter-wood;

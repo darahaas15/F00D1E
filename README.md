@@ -16,18 +16,18 @@ Restaurant delivery app with full admin side order status control. Made by [Dara
  ![image](https://user-images.githubusercontent.com/63366288/130773443-4135a9f4-10a3-4a11-9539-85aa72948fb4.png)
 
 ###Things I learnt while doing this project:
-- Learnt TailWind CSS for a responsive design and EJS templating engine
-- Working with the Laravel Mix webpack
-- Express-flash and Noty for displaying server side notifications on to the front-end
-- Passport.js and session cookies
-- Working with MongoDB and the Mongoose library
-- Got a rough idea of what axios is
-- Added both user and admin cookies with timeout interval
-- Learnt how to use express-session to manage session middlewares
-- Used bcrypt for hasing passwords
-- Used socket connection for realtime communication between customer and admin side
-- Deployed a full-stack app on Heroku for the first time
-- Error handling
+- Learnt TailWind CSS for a responsive design and EJS templating engine.
+- Working with the Laravel Mix webpack.
+- Express-flash and Noty for displaying server side notifications on to the front-end.
+- Passport.js for making a login and logout feature.
+- Working with MongoDB and the Mongoose library.
+- Got a rough idea of what Axios is.
+- Added both user and admin cookies with timeout interval.
+- Learnt how to use Express-Session to manage session middlewares.
+- Used Bcrypt for hasing passwords.
+- Used Socket.io connection for realtime communication between customer and admin side.
+- Deployed a full-stack app on Heroku for the first time.
+- Error handling.
 
 
 

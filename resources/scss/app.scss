@@ -120,6 +120,7 @@ section.login {
   min-height: calc(100vh - 86px);
   .login-form {
     background: $dark-wood;
+    position: relative;
   }
   .password-box {
     color: $dark-lighter;

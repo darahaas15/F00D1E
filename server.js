@@ -80,8 +80,12 @@ app.use((req, res) => {
   res.status(404).render('errors/404.ejs');
 });
 
-const server = app.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}`);
+const server = app.listen(process.env.PORT || 3000, function () {
+  console.log(
+    'Express server listening on port %d in %s mode',
+    this.address().port,
+    app.settings.env
+  );
 });
 
 // Socket.io

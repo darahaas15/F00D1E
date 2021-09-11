@@ -25,7 +25,7 @@ Deployed website link: [F00D1E](https://f00d1e.herokuapp.com/)
 - Got a rough idea of what Axios is.
 - Added both user and admin cookies with timeout interval.
 - Learnt how to use Express-Session to manage session middlewares.
-- Used Bcrypt for hasing passwords.
+- Used Bcrypt for hashing passwords.
 - Used Socket.io connection for realtime communication between customer and admin side.
 - Deployed a full-stack app on Heroku for the first time.
 - Error handling.

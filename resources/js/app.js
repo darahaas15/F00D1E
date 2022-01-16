@@ -77,7 +77,7 @@ updateStatus(order);
 let socket = io();
 initAdmin(socket);
 
-// Join socket connection
+// Join socket connection ( Seamless connection between admin panel and user cart )
 if (order) {
   socket.emit('join', `order_${order._id}`);
 }
